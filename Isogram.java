@@ -1,28 +1,29 @@
+//check whether the string has duplicate letters or not
 package Java;
+public class Isogram {
+	public static void main(String [] args) {
+	String input = "preethi";
+	String str = input.toLowerCase();
+	boolean isogram = true ;
+	for(int i = 0;i<=str.length();i++) {
+		for(int j = i+1; j<str.length();j++) {
+			if(str.charAt(i) == str.charAt(j)) {
+				isogram = false;
+				break;
+			}
+		}
+		if(!isogram)
+			break;
+	}
+	if(isogram)
+		System.out.println(input +"is a isogram");
+	else
+		System.out.println(input +" is not a isogram");
+}
+	
+}
 
-//public class Isogram {
-//	public static void main(String [] args) {
-//	String input = "preethi";
-//	String str = input.toLowerCase();
-//	boolean isogram = true ;
-//	for(int i = 0;i<=str.length();i++) {
-//		for(int j = i+1; j<str.length();j++) {
-//			if(str.charAt(i) == str.charAt(j)) {
-//				isogram = false;
-//				break;
-//			}
-//		}
-//		if(!isogram)
-//			break;
-//	}
-//	if(isogram)
-//		System.out.println(input +"is a isogram");
-//	else
-//		System.out.println(input +" is not a isogram");
-// }
-//	
-//}
-
+//using hashset
 
 import java.util.HashSet;
 public class Isogram{
