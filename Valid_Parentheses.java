@@ -1,7 +1,10 @@
-package coreJava;
+/*Input: s = "([)]"
+Output: false
+
+Input: s = "([])"
+Output: true*/
 
 import java.util.Stack;
-
 public class Valid_Parentheses {
 
 	public static void main(String[] args) {
