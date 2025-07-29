@@ -7,29 +7,20 @@ public class SmallestSubarraysWithMaxOR {
 
         for (int val : result) {
             System.out.print(val + " ");
+          }
         }
-    }
 	public static int[] smallestSubarrays(int[] nums) {
         int n = nums.length;
-        int[] result = new int[n];
-        int[] lstSeen = new int[32]; 
-        
-        for (int i = 0; i < 32; i++) {
-            lstSeen[i] = -1;
-        }
-
-        for (int i = n - 1; i >= 0; i--) {
-            for (int bit = 0; bit < 32; bit++) {
-                if ((nums[i] & (1 << bit)) != 0) {
-                    lstSeen[bit] = i;
-                }
+        int[] res = new int[n];
+        for (int i = 0; i < n; i++) {
+            res[i] = 1;
+            for (int b = i - 1; b >= 0; b--) {
+                if ((nums[b] | nums[i]) == nums[b]) 
+                  break;
+                nums[b] |= nums[i];
+                res[b] = i - b + 1;
             }
-            int maxIndex = i;
-            for (int bit = 0; bit < 32; bit++) {
-                maxIndex = Math.max(maxIndex, lstSeen[bit]);
-            }
-            result[i] = maxIndex - i + 1;
         }
-        return result;
-    }
+        return res;
+       }	      
 }
