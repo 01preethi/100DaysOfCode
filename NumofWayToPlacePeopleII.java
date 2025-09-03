@@ -1,7 +1,5 @@
 package coreJava;
-
 import java.util.Arrays;
-
 public class NumofWayToPlacePeopleII {
  public static void main(String[] args) {
 	 int[][] points = {{6,2},{4,4},{2,6}};
@@ -34,3 +32,4 @@ public class NumofWayToPlacePeopleII {
  }
 
 }
+
