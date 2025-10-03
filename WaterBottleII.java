@@ -1,5 +1,5 @@
 package coreJava;
-public class WaterBottle {
+public class WaterBottleII {
 	public static void main(String[] args) {
 		int numBottles = 13, numExchange = 3;
 		System.out.print("max number of Bottles Drunk is: "+maxBottlesDrunk(numBottles, numExchange));
@@ -22,3 +22,4 @@ public class WaterBottle {
         return bottlesDrunk;
     }
 }
+
